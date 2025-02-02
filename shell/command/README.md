@@ -47,3 +47,26 @@ filtrar mais de um termo adicione a flag -E. E para forçar o grep filtrar apena
 ```
 lscpu | grep -Ewi 'architecture|model name|cpu mhz'
 ```
+
+### Executar um programa
+
+Para executar um programa dentro do terminal zsh, você pode usar o comando ./nome_do_programa:
+```
+./firefox
+```
+Caso o programa estiver no seu path, você pode simplesmente digitar o nome dele no terminal e pressionar Enter.
+```
+firefox
+```
+O comando which informa o local do arquivo executável de um programa. Você pode usar esse comando para verificar se um programa está instalado e para descobrir o caminho completo para o arquivo executável.
+```
+whereis firefox
+```
+Se você não tiver certeza do nome do programa, pode usar o comando apropos para pesquisar por programas que correspondam a uma palavra-chave:
+````
+apropos web browser
+````
+Você pode usar o comando man para ler a página de manual de um programa. A página de manual fornece informações sobre como usar o programa:
+```
+help which
+```

@@ -107,3 +107,7 @@ https://zsh.sourceforge.io/
 https://thinksystem.lenovofiles.com/storage/help/index.jsp?topic=%2Fsystem_administration_guide%2F9A43614C-EEF9-4C9A-B007-2F8FAE55E44C_.html
 
 https://docstore.mik.ua/orelly/linux/lnut/ch08_07.htm
+
+https://thinksystem.lenovofiles.com/storage/help/index.jsp?topic=%2Fsystem_administration_guide%2F9A43614C-EEF9-4C9A-B007-2F8FAE55E44C_.html
+
+https://mamchenkov.net/wordpress/2010/08/05/shell-keyboard-shortcuts/?amp=1

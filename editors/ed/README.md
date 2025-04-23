@@ -19,25 +19,13 @@ Unknown command
 b
 Unknown command
 ```
-- Para sair do `ed`, pressione `q` ou `Q`
-```
-q
-
-ou
-
-Q
-```
-- Sair do modo de entrada de linhas, pressione ponto (.)
+- Caso tenha terminado de inserir as informações nescessárias, para sair do modo de entrada de linhas, pressione ponto (.)
 ```
 .
 ```
 - Imprimir a linha ATUAL, pressione `p` ou ponto (.)
 ```
-p
-
-ou 
-
-.
+p ou .
 ```
 - Imprimir a linha ATUAL e com o número da linha, pressione `n`
 ```
@@ -56,15 +44,13 @@ a
 ```
 i
 ```
-- Substituir uma linha INTEIRA, pressione `c`
-```
-c
-```
-- Excluir uma linha INTEIRA, pressione `d`
+- Excluir uma linha INTEIRA (ou intervalo), pressione `d`
 ```
 d (excluir linha atual)
 
 2d (excluir linha 2)
+
+5,7d //excluir o intervalo entre 5 e 7, e eles mesmos
 ```
 - Ver `buffer` INTEIRO, pressione `,p` ou `1,$p`
 ```
@@ -93,9 +79,16 @@ Para continuar a pesquisa, execute o comando novamente até chegar ao objetivo. 
 
 ?Ariana?n
 ```
-- Para TODAS as informações do `buffer`, pressione `w` seguido do nome do arquivo de preferência. Ao fazer isso, será retornado o número de `bytes` escritos no arquivo.
+## Salvar buffer 
+- Para salvar TODAS as informações do `buffer`, pressione `w` seguido do nome do arquivo de preferência. Ao fazer isso, será retornado o número de `bytes` escritos no arquivo.
 ```
-w glinda.txt
+w glinda.txt //caso o arquivo não exista, adicione o nome e sua extenção
+
+w //caso o arquivo já exista
+```
+Caso o arquivo já exista, e queira gravar as modificações em um arquivo diferente do atual, expecifique um nome de arquivo diferente:
+```
+w glinda2.txt
 ```
 - Para salvar apenas um subconjunto específico de informações, o `w`, aceita um intervalo específico.
 ```
@@ -106,10 +99,29 @@ w glinda.txt
 ```
 1,3W glinda.txt
 ```
-- Retornar o número de linhas de um arquivo
+## Juntar conteúdo de dois (ou mais) arquivos diferentes
+Para juntar TODO o conteúdo de um arquivo com o atual, pressione `r` seguido do arquivo que quer fazer a junção
 ```
-r glinda.txt
+r glinda.txt //ao final do buffer atual
 109
+```
+Caso queira fazer juntar TODO o conteúdo e inserí-lo APÓS uma linha específica:
+```
+6r glinda.txt //após alinha 6, o conteúdo de glinda.txt vai ser inserido
+```
+## Número de linhas
+- Quantas linhas há no arquivo
+```
+$= ou .=
+```
+## Navegação
+Para mover uma linha por vez para frente (forma progressiva) no buffer
+```
+<Enter>
+```
+Para mover uma linha por vez para trás (forma regressiva) no buffer 
+```
+- (hífen)
 ```
 - COPIAR linha para outro local, digite o número (ou intervalos) da linha que deseja copiar e, em seguida, pressione `t` seguida da posição (linha) de destino.
 ```
@@ -130,6 +142,25 @@ Para editar o buffer, vá para a linha que deseja editar e, em seguida, invoque 
 5
 s/Aris/Ariana
 ```
+Caso não insira o número da linha, o resultado será aplicado na linha de trabalho atual (p). Ou você pode inserir o número da linha durante a invocação
+```
+5s/Aris/Ariana
+```
+Caso deseje alter várias string dentro de um intervalo de linhas:
+```
+1,3s/muito/muito2 //alterar muito para muito2 das linhas entre 1 e 3
+```
+Note que ele sempre vai alterar a primeira ocorrência que ele encontrará, isto é, se houver duas ocorrências iguais, ele vai alterar apenas a primeira. Você pode especificar qual ocorrência quer modificar, adicionado o número:
+```
+1,3s/0/a/2 //alterar a segunda ocorrência de 0 para a
+```
+Ele vai pular a primeira ocorrência e alterar a segunda. Para alterar TODAS as ocorrências, adicione `/g`, operador global
+```
+1,3s/a/0/g //alterar TODAS as ocorrências de a para 0
+```
+Para DELETAR TODAS as ocorrências de uma palavra da LINHA ATUAL
+s/Ariana//
+```
 ## Limpar o buffer
 Para apagar todos as informações pressione `c`
 ```
@@ -145,6 +176,7 @@ info ed
 Básico
 
 - https://medium.com/predict/using-ed-the-unix-line-editor-557ed6466660
+- https://www.ibm.com/docs/en/zos/2.3.0?topic=files-using-ed-editor
 
 - https://wiki.c2.com/?EdIsTheStandardTextEditor
 

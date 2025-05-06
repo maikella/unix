@@ -30,7 +30,17 @@ drwxr-xr-x. 1 user001 user001 190 Feb  1 21:54 linux
 drwxr-xr-x. 1 user001 user001  40 Feb  2 13:16 shell
 ```
 
-- Primeira coluna são as permissões que cada diretório e arquivo possuem.
+- Primeira coluna são as permissões que cada diretório e arquivo possue.
+
+        - Primeira coluna
+
+`-` representa um arquivo comum como, \*png, \*zip \*txt, etc. 
+
+`d` indica que o arquivo é um diretório
+
+`s` indica que o arquivo é uma soquete (socket)
+
+`l` representa um link simbólico
 
 - Segunda coluna são números de links simbólicos que cada arquivo possue.
 

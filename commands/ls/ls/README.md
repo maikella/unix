@@ -3,7 +3,7 @@ O comando `ls` tem como objetivo listar o conteúdo de um diretório. Por padrã
 ```
 ls
 ```
-Arquivos que começam com ponto (.) não são listados, a menos que você adicione a flag `-a` ou `-A`. Esses arquivos são chamados de arquivos ocultos, que são arquivos especiais que armazenam configurações do usuário e dados de configuração, usados programas e serviços em execução para ler e armazenar informações.
+Arquivos que começam com ponto (.), chamados de `dot files`, não são listados, a menos que você adicione a flag `-a` ou `-A`. Esses arquivos são chamados de arquivos ocultos, que são arquivos especiais que armazenam configurações do usuário e dados de configuração, usados programas e serviços em execução para ler e armazenar informações.
 
 Por exemplo, o arquivo `.bashrc` é um script que contém as configurações do usuário conectado no momento, incluindo aliases de comando, histórico do shell, a cor da fonte do terminal, etc.
 
@@ -12,6 +12,11 @@ O arquivo .bash_logout é executado quando você sai das suas sessões bash. Ele
 Para listar arquivos e diretórios.
 ```
 ls -a
+```
+## Mostrar Arquivos Ocultos sem . e .. Implícitos
+Ao listar arquivos ocultos, os primeiros "arquivos" são `.` e `..`, que são diretórios implícitos. Para omitir esses arquivos, use a flag `-A`.
+```
+ls -A
 ```
 Para informações mais detalhadas, adicione o argumento `-l`. A saída já vai ter um formato em colunas, com informações adicionais, como proprietário do arquivo, data e hora de modificação, etc.
 ```

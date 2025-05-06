@@ -14,7 +14,7 @@ Para listar arquivos e diretórios.
 ls -a
 ```
 ## Mostrar Arquivos Ocultos sem . e .. Implícitos
-Ao listar arquivos ocultos, os primeiros "arquivos" são `.` e `..`, que são diretórios implícitos. Para omitir esses arquivos, use a flag `-A`.
+Ao listar arquivos ocultos, os primeiros "arquivos" são `.` (diretório atual) e `..` (diretório pai do diretório atual), que são diretórios implícitos. Para omitir esses arquivos, use a flag `-A`.
 ```
 ls -A
 ```
@@ -56,6 +56,14 @@ Em um cenário onde você não tem as cores para ajudar a distinguir diretórios
 ```
 ls -F
 ```
+- Arquivo normal como \*png, \*zip \*txt, etc. Não há nenhuma informação visual
+
+- Diretórios `/` 
+
+- Link simbólico `@`
+
+- Arquivo executável `*`
+
 ## Classificando Arquivos em Ordem Reversa
 Por padrão, o comando ls classifica arquivos e diretórios em ordem alfabética (de A a Z). Você pode optar por classificar o conteúdo do diretório em ordem reversa usando a opção -r (Z a A).
 ```
@@ -100,7 +108,18 @@ alias ls='ls --color=auto'
 ```
 unalias ls
 ```
+remover permanentemente
+```
+sudo vi profile.d/colorls.sh //ou .csh
+
+exclua ou comente a linha
+```
+## Listar diretórios e arquvios em uma única coluna
+```
+ls -1
+```
 ## Referências
 
 - https://www.tecmint.com/ls-command-in-linux/
 
+- https://www.geeksforgeeks.org/ls-command-in-linux/

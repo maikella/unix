@@ -1,4 +1,4 @@
-## ls (abriviação de list)
+## ls (abreviação de list)
 O comando `ls` tem como objetivo listar o conteúdo de um diretório. Por padrão, ele vai listar arquivos em ordem alfabética.
 ```
 ls
@@ -30,25 +30,38 @@ drwxr-xr-x. 1 user001 user001 190 Feb  1 21:54 linux
 drwxr-xr-x. 1 user001 user001  40 Feb  2 13:16 shell
 ```
 
-- Primeira coluna são as permissões que cada diretório e arquivo possue.
+- Primeira coluna mostra o tipo e as permissões de cada arquivo possue.
 
-        - Primeira coluna
+### Primeira coluna - Tipo de arquivo
+A primeira coluna indica o tipo de arquivo:
 
-`-` representa um arquivo comum como, \*png, \*zip \*txt, etc. 
+- `-` representa um arquivo comum como, \*png, \*zip \*txt, etc. 
 
-`d` indica que o arquivo é um diretório
+- `d` indica que o arquivo é um diretório
 
-`s` indica que o arquivo é uma soquete (socket)
+- `s` indica que o arquivo é um soquete (socket)
 
-`l` representa um link simbólico
+- `l` representa um link simbólico
+### Permissões
+Os próximos caracteres, indicam as permissões que cada arquivo possue. 
+
+- `r` significa que a entidade tem permissão para ler o arquivo (read)
+
+- `w` tem permissão para modificar o arquivo (write)
+
+- `e` tem permissão de executar esse arquivo, como um script bash, por exemplo (execute)
+
+A cada 3 caracteres, é representado uma entidade, que é usuário, grupo e outros. Cada entidade pode ter ou não permissão para visualizar, modificar ou executar um arquivo.
 
 - Segunda coluna são números de links simbólicos que cada arquivo possue.
 
-- Terceira e Quarta coluna são as entidades que são donas desses arquivos.
+- Terceira e quarta coluna são as entidades que são donas desses arquivos.
+
+A terceira indica quem é o proprietário do arquivo, enquanto a quarta, indica a qual grupo esse arquivo pertence.
 
 - Quinta coluna indica o tamanho em `bytes` de cada arquivo.
 
-- Sexta, Sétima e Oitava coluna é a data e hora da última modificação do arquivo.
+- Sexta, sétima e oitava coluna indica a data e hora da última modificação do arquivo.
 
 - A última coluna se refere ao nome do arquivo/diretório
 

@@ -159,6 +159,7 @@ Ele vai pular a primeira ocorrência e alterar a segunda. Para alterar TODAS as 
 1,3s/a/0/g //alterar TODAS as ocorrências de a para 0
 ```
 Para DELETAR TODAS as ocorrências de uma palavra da LINHA ATUAL
+```
 s/Ariana//
 ```
 ## Limpar o buffer

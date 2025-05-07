@@ -30,9 +30,9 @@ drwxr-xr-x. 1 user001 user001 190 Feb  1 21:54 linux
 drwxr-xr-x. 1 user001 user001  40 Feb  2 13:16 shell
 ```
 
-- Primeira coluna mostra o tipo e as permissões de cada arquivo possue.
+- Primeira coluna agrupa o tipo e as permissões de cada arquivo possue.
 
-### Primeira coluna - Tipo de arquivo
+### 1. Primeira coluna
 A primeira coluna indica o tipo de arquivo:
 
 - `-` representa um arquivo comum como, \*png, \*zip \*txt, etc. 
@@ -42,14 +42,14 @@ A primeira coluna indica o tipo de arquivo:
 - `s` indica que o arquivo é um soquete (socket)
 
 - `l` representa um link simbólico
-### Permissões
+### 2. Permissões
 Os próximos caracteres, indicam as permissões que cada arquivo possue. 
 
 - `r` significa que a entidade tem permissão para ler o arquivo (read)
 
 - `w` tem permissão para modificar o arquivo (write)
 
-- `e` tem permissão de executar esse arquivo, como um script bash, por exemplo (execute)
+- `x` tem permissão de executar esse arquivo, como um script bash, por exemplo (execute)
 
 A cada 3 caracteres, é representado uma entidade, que é usuário, grupo e outros. Cada entidade pode ter ou não permissão para visualizar, modificar ou executar um arquivo.
 
@@ -57,7 +57,7 @@ A cada 3 caracteres, é representado uma entidade, que é usuário, grupo e outr
 
 - Terceira e quarta coluna são as entidades que são donas desses arquivos.
 
-A terceira indica quem é o proprietário do arquivo, enquanto a quarta, indica a qual grupo esse arquivo pertence.
+A terceira indica quem é o proprietário do arquivo, enquanto a quarta, indica a qual grupo esse arquivo pertence. Todos os membros desse grupo, tem as permissões que foram definidas para esse grupo.
 
 - Quinta coluna indica o tamanho em `bytes` de cada arquivo.
 

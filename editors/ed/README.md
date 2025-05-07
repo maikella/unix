@@ -181,3 +181,6 @@ Básico
 
 - https://wiki.c2.com/?EdIsTheStandardTextEditor
 
+youtube
+
+https://www.youtube.com/watch?app=desktop&v=mRZsV7aMK0I&list=PL0qfF8MrJ-jxAGRC2PJFrHNdsMRzMx6GD&index=7

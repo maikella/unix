@@ -1,2 +1,25 @@
 ## adduser
 No Fedora, não há diferença. `adduser` é um link simbólico para `useradd`. Isso pode ser verificado acessando `/usr/sbin/`. Isso significa que, os dois fazem a mesma coisa. Porém em outros sistemas operacionais como no Debian (e suas variações), tem um comportamento diferente.
+```
+useradd ariana
+```
+Ao adicionar um novo usuário, ele é criado em um estado "bloqueado", pois ainda não definimos a senha
+```
+passwd ariana
+```
+Oficialmente criado, ele é adicionado em `/etc/passwd`. O arquivo `passwd`, é usado para armazenar informações do usuário.
+```
+ariana:x:1001:1001::/home/ariana:/bin/bash
+```
+A entrada acima contém 7 campos separados por dois pontos:
+
+- Primeiro campo - Nome do usuário
+
+O nome do usuário, é usado para efetuar o login no sistema.
+
+- Segundo campo - Senha (x)
+
+O caractere `x`, representa a senha do usuário. Ela é armazenada no arquivo `/etc/shadow` em um formato criptografado.
+
+## Referências
+https://www.tecmint.com/add-users-in-linux/

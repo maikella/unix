@@ -23,6 +23,22 @@ O caractere `x`, representa a senha do usuário. Ela é armazenada no arquivo `/
 
 - Terceiro campo - ID do usuário (1001)
 
-Cada usuário deve ter um ID de usuário (UID), que é o número de identificação do usuário no sistema. Por padrão, o `UID 0`, é reservado para o usuário `root` e os UIDs de 1 a 99 são reservados para outras contas predefinidas. Já os UIDs de 100 a 999, são reservados para contas e grupos do sistemas.
+Cada usuário deve ter um ID de usuário (UID), que é o número de identificação do usuário no sistema. Por padrão, o `UID 0`, é reservado para o usuário `root` e os UIDs de 1 a 99 são reservados para outras contas predefinidas. Já os UIDs de 100 a 999, são reservados para contas e grupos do sistema.
+
+- Quarto campo - ID do grupo (1001)
+
+O ID do grupo primário (GID), siginica que é o número de identificação do grupo no sistema, armazenado no arquivo `/etc/group`.
+
+- Quinto campo - Informações do usuário (Opcional)
+
+Este campo permite definir informações extras sobre o usuário, como o nome completo. Essas informações podem ser preenchidas usando comando `finger`.
+
+- Sexto campo - Diretório home
+
+A localização absoluta do diretório home do usuário.
+
+- Sétimo campo - Shell
+
+A localização do shell do usuário, isto é, o shell que o usuário está usando.
 ## Referências
 https://www.tecmint.com/add-users-in-linux/

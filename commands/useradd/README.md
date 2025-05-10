@@ -21,5 +21,8 @@ O nome do usuário, é usado para efetuar o login no sistema.
 
 O caractere `x`, representa a senha do usuário. Ela é armazenada no arquivo `/etc/shadow` em um formato criptografado.
 
+- Terceiro campo - ID do usuário (1001)
+
+Cada usuário deve ter um ID de usuário (UID), que é o número de identificação do usuário no sistema. Por padrão, o `UID 0`, é reservado para o usuário `root` e os UIDs de 1 a 99 são reservados para outras contas predefinidas. Já os UIDs de 100 a 999, são reservados para contas e grupos do sistemas.
 ## Referências
 https://www.tecmint.com/add-users-in-linux/

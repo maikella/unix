@@ -44,11 +44,17 @@ A localização do shell do usuário, isto é, o shell que o usuário está usan
 ```
 sudo useradd -u 1004 -g ariana3 ariana4
 ```
-Por padrão, ao criar usuários, cada um possui o seu próprio GID (identificador de grupo) semelhante ao UID. Com esse comando, estamos criando um usuário, `ariana4`, e especificando seu UID `1004` e especificando o GID, adicionando em um grupo diferente (existente) chamado, `ariana3`.
+Por padrão, ao criar usuários, cada um possui o seu próprio GID (identificador de grupo) semelhante ao UID. Com esse comando, estamos criando um usuário, `ariana4`, e especificando seu UID como `1004` com o argumento `-u`, e especificando o GID, adicionando em um grupo diferente (existente) chamado, `ariana3`.
 
 Para verificar qual é o GID de um usuário:
 ```
 id -gn ariana4
 ```
+## Como adicionar um usuário a vários grupos
+Com o argumento `-G`, é possível adicionar um usuário a grupos adicionais. O nome de cada grupo deve ser separados por vírgula sem espaço entre eles. Lembre-se que só funciona com grupos preexistentes:
+```
+usermod -aG group1,group2,group user001
+```
+Por ser um usuário existente, deve ser usado o argumento `-a`, porque ele vai garantir que os grupos anteriores da qual esse usuário faz parte, se mantenham com a adição de novos grupos. Caso seja um novo usuário, o argumento pode ser omitido, visto que, ele ainda não foi inserido no sistema, então não possue grupos.
 ## Referências
 https://www.tecmint.com/add-users-in-linux/

@@ -40,5 +40,15 @@ A localização absoluta do diretório home do usuário.
 - Sétimo campo - Shell
 
 A localização do shell do usuário, isto é, o shell que o usuário está usando.
+## Criar usuário com UID específico e adicioná-lo a um grupo existente
+```
+sudo useradd -u 1004 -g ariana3 ariana4
+```
+Por padrão, ao criar usuários, cada um possui o seu próprio GID (identificador de grupo) semelhante ao UID. Com esse comando, estamos criando um usuário, `ariana4`, e especificando seu UID `1004` e especificando o GID, adicionando em um grupo diferente (existente) chamado, `ariana3`.
+
+Para verificar qual é o GID de um usuário:
+```
+id -gn ariana4
+```
 ## Referências
 https://www.tecmint.com/add-users-in-linux/

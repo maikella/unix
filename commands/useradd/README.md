@@ -50,11 +50,23 @@ Para verificar qual é o GID de um usuário:
 ```
 id -gn ariana4
 ```
+O argumento `-g`, retorna o GID do grupo primário do usuário (grupo do qual foi criado junto com ele). Já o `-n`, retorna o nome do grupo.
 ## Como adicionar um usuário a vários grupos
 Com o argumento `-G`, é possível adicionar um usuário a grupos adicionais. O nome de cada grupo deve ser separados por vírgula sem espaço entre eles. Lembre-se que só funciona com grupos preexistentes:
 ```
 usermod -aG group1,group2,group user001
 ```
 Por ser um usuário existente, deve ser usado o argumento `-a`, porque ele vai garantir que os grupos anteriores da qual esse usuário faz parte, se mantenham com a adição de novos grupos. Caso seja um novo usuário, o argumento pode ser omitido, visto que, ele ainda não foi inserido no sistema, então não possue grupos.
+```
+useradd -G group1,group2,group newUser
+```
+Para verficar quais grupos um usuário faz parte, existem duas formas:
+```
+id user001
+```
+Alternativamente:
+```
+groups user001
+```
 ## Referências
 https://www.tecmint.com/add-users-in-linux/

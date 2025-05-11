@@ -68,5 +68,19 @@ Alternativamente:
 ```
 groups user001
 ```
+## Criar um usuário com data de expiração
+Por padrão, ao adicionar um usuário, a conta nunca expira, porque sua data de expiração foi definida como `0`. No entanto, adicionando o argumento `-e`, podemos definir uma data de expiração. O formato é `YYYY-MM-DD`. Isso é útil para criar contas temporárias por um período específico.
+```
+useradd -e 2025-05-11 arianaGrande
+```
+O usuário `arianaGrande` tem agora uma data de expiração, que 11 de maio de 2025. Para verificar informações de validade de uma conta e da senha, use o comando `chage`:
+```
+sudo chage -l arianaGrande
+```
+## Criar um usuário com data de expiração de senha
+O argumento `-f` é usado para definir o número de dias após a expiração de uma senha. O valor `0` desativa a conta do usuário assim que a senha expira. Por padrão, o valor de expiração da senha é definido como `-1` (nunca expira).
+```
+useradd -e 2025-05-11 -f 1 arianaGrande
+```
 ## Referências
 https://www.tecmint.com/add-users-in-linux/

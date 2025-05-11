@@ -82,5 +82,25 @@ O argumento `-f` é usado para definir o número de dias após a expiração de 
 ```
 useradd -e 2025-05-11 -f 1 arianaGrande
 ```
+##Adicionar informações extras ao adicionar um usuário
+O argumento `-c` permite adicionar informações como o nome completo, número de telefone ao arquivo `/etc/passwd`.
+```
+useradd -c "Ariana Grande" ari
+```
+Você pode vizualizar essas informações:
+```
+tail -1 /etc/password
+
+ari:x:1010:1012:Ariana Grande:/home/ari:/bin/bash
+```
+## Atribuir um shell diferente para um usuário
+Com o argumento `-s` podemos atribuir shells de login diferentes para cada novo usuário:
+```
+useradd -s /sbin/nologin ari
+```
 ## Referências
 https://www.tecmint.com/add-users-in-linux/
+
+https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
+
+https://www.linux.org/threads/adding-a-user-from-the-command-line.54704/

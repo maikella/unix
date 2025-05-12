@@ -1,1 +1,2 @@
 ## userdel
+Quando `userdel` é invocado, ele lê o arquvivo `/etc/logindefs` As propriedades definidas nesse arquivo substituem o comportamento padrão de `userdel`. Se `USERGROUPS_ENAB` estiver definido como `yes`, `userdel` vai excluir o grupo com o mesmo nome do usuário caso não haja nenhum outro usuário nesse mesmo grupo. O comando remove as entradas de usuários dos arquivos `/etc/passwd` e `/etc/shadow`.

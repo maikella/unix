@@ -8,7 +8,11 @@ userdel -r ari
 Caso o usuário esteja logado ou se houver processos em execução, o comando `userdel` não permitirá a remoção. Para desconectar e encerrar todos os processos em execução:
 ```
 killall -u ari
+userdel -r ari
 ```
 Alternativamente, você pode usar o argumento `-f (--force)`, que informa ao `userdel` a remoção do usuário, mesmo que ele ainda esteja logado ou se houver processos em execução.
+```
+userdel -f ari
+```
 ## Referências
 https://linuxize.com/post/how-to-delete-users-in-linux-using-the-userdel-command/

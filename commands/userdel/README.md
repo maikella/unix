@@ -16,3 +16,7 @@ userdel -f ari
 ```
 ## Referências
 https://linuxize.com/post/how-to-delete-users-in-linux-using-the-userdel-command/
+
+https://www.cyberciti.biz/faq/linux-drop-user-remove-a-linux-user/
+
+https://www.cyberciti.biz/faq/linux-remove-user-command/

@@ -123,7 +123,7 @@ Para mover uma linha por vez para trás (forma regressiva) no buffer
 ```
 - (hífen)
 ```
-- COPIAR linha para outro local, digite o número (ou intervalos) da linha que deseja copiar e, em seguida, pressione `t` seguida da posição (linha) de destino.
+- COPIAR linha para outro local, digite o número (ou intervalos) da linha que deseja copiar e, em seguida, pressione `t` seguida da posição (linha) de destino. Ao fazer isso, a linha a ser copiada, será adicionado ABAIXO da linha que você especificar.
 ```
 3,4t0 //copia intervalos entre 3 e 4, incluíndo eles, para a posição 0
 
@@ -172,6 +172,28 @@ Existem três maneiras de encerrar uma sessão ed: `q`, `Q` ou `Ctrl + D`
 ## Manual completo do ed
 ```
 info ed
+```
+## Remover vários caracteres diferentes de todo o buffer
+```
+96	- continue
+97	
+98	A instrução `continue` ignora a iteração atual e passa para a próxima.
+99	
+100	Observe que temos dois loop `for`, e internamente no segundo for, colocamos a instrução `break`. Isso significa que o `for` mais interno será executado apenas uma vez a cada repetição do `for` externo. Se tivéssemos omitido a instrução `break`, a cada loop do `for` externo, o `for` interno, executaria o loop completo a cada repetição do loop `for` externo.
+101	https://www.quora.com/What-is-iteration-What-does-it-mean-to-iterate-through-an-array-in-Java
+102
+```
+Por exemplo, quero remover a sequência numérica 96-102:
+```
+,s/\(96\|99\)//
+```
+No exemplo acima, você teria que especificar cada caractere por vez. Caso queira remover um intervalo:
+```
+,s/\(9[7-8]\|10[0-1]\)//
+```
+Para não acontecer de você remover partes de números como `1996, 1010101`, user o `\b`. Ele garante que você substitua exatamente o que você especificou ao invés de remover frações contidadas em partes de outros números.
+```
+,s/\b\(9[7-8]\|10[0-1]\)//
 ```
 ## Referências
 Básico

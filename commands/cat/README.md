@@ -13,6 +13,6 @@ cp file.txt file_copy
 ```
 Outra possibilidade é o arquivo `file2.txt` não existir. Caso ele não exista, o comando `cat` criará, caso contrário, ele o sobrescreverá.
 
-Caso o arquivo exista e você não quer sobrescrever todo o conteúdo, você pode usar o operador duplo de maior `>>`. Ao fazer isso, o cocomando `cat` vai adicionar o conteúdo do arquivo `file1.txt` ao final do arquivo `file2.txt`.
+Caso o arquivo exista e você não quer sobrescrever todo o conteúdo, você pode usar o operador duplo de maior `>>`. Ao fazer isso, o comando `cat` vai adicionar o conteúdo do arquivo `file1.txt` ao final do arquivo `file2.txt`.
 ## Referências
 https://linuxize.com/post/linux-cat-command/

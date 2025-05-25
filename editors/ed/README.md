@@ -79,6 +79,15 @@ Para continuar a pesquisa, execute o comando novamente até chegar ao objetivo. 
 
 ?Ariana?n
 ```
+### Operação de pesquisa sem diferenciar letras maiúsculas de minúsculas
+Para que o `ed` busque algo sem se importar com a capitalização, adicione no final do comando `I`:
+```
+/ariana/I
+```
+O mesmo vale para a pesquisa regressiva:
+```
+?ariana?I
+```
 ## Salvar buffer 
 - Para salvar TODAS as informações do `buffer`, pressione `w` seguido do nome do arquivo de preferência. Ao fazer isso, será retornado o número de `bytes` escritos no arquivo.
 ```

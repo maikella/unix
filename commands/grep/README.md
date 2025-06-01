@@ -50,5 +50,36 @@ grep -v Ariana sobre_ariana.txt
 Gosta de experimentar coisas novas, assim como criar novas coisas.
 Um ser humano encantador.
 ```
+
+- Numerar as linhas que contêm o padrão de busca
+
+Você também pode enumerar as linhas das correspondências encontradas, que vai te ajudar a identicar em que linhas elas se encontram:
+```
+grep -n um sobre_ariana.txt
+
+1:Ariana é uma garota muito bonita, divertida, dócil, disciplinada.
+5:Um ser humano encantador.
+```
+- Procurar a palavra correspondente exata
+
+Por padrão, o grep procura não apenas palavras exatas como também procura dentro de outros palavras o padrão que foi adicionado. Poremplo, anteriormente, você buscou pela string `um`, e foi retornado linhas contendo `Um` e `uma`. Observe que existe `um` dentro de `uma`, mas caso você queira de fato apenas `um`, adicione o argumento `-w`:
+```
+grep -wi um sobre_ariana.txt
+
+Um ser humano encantador.
+```
 ## Referências
 https://www.digitalocean.com/community/tutorials/grep-command-in-linux-unix
+
+https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/
+
+https://superuser.com/questions/600975/how-to-use-grep-to-search-for-regular-expressions-themselves-without-parsing-th
+
+https://linuxize.com/post/regular-expressions-in-grep/
+
+
+https://linuxize.com/post/how-to-use-grep-command-to-search-files-in-linux/
+
+https://www.ibm.com/docs/en/aix/7.3.0?topic=g-grep-command
+
+https://www.geeksforgeeks.org/grep-command-in-unixlinux/

@@ -40,5 +40,15 @@ Ariana é uma garota muito bonita, divertida, dócil, disciplinada.
 grep -c 'Ariana' sobre_ariana.txt
 1
 ```
+
+- Inverter saída do comando grep
+
+Por padrão, o comando `grep`, retorna apenas as linhas correspondêntes, porém, ao adicionar o argumento `-v`, o comando retornará todas as linhas que não correspondem a expressão:
+```
+grep -v Ariana sobre_ariana.txt
+
+Gosta de experimentar coisas novas, assim como criar novas coisas.
+Um ser humano encantador.
+```
 ## Referências
 https://www.digitalocean.com/community/tutorials/grep-command-in-linux-unix

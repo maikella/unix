@@ -43,12 +43,17 @@ grep -c 'Ariana' sobre_ariana.txt
 
 - Inverter saída do comando grep
 
-Por padrão, o comando `grep`, retorna apenas as linhas correspondêntes, porém, ao adicionar o argumento `-v`, o comando retornará todas as linhas que não correspondem a expressão:
+Por padrão, o comando `grep`, retorna apenas as linhas correspondêntes, porém, ao adicionar o argumento `-v`, o comando retornará todas as linhas que NÃO correspondem a expressão:
 ```
 grep -v Ariana sobre_ariana.txt
 
 Gosta de experimentar coisas novas, assim como criar novas coisas.
 Um ser humano encantador.
+
+grep -vi ser\ humano\ encantador sobre_ariana.txt
+
+Ariana é uma garota muito bonita, divertida, dócil, disciplinada.
+Gosta de experimentar coisas novas, assim como criar novas coisas.
 ```
 
 - Numerar as linhas que contêm o padrão de busca
@@ -67,6 +72,18 @@ Por padrão, o grep procura não apenas palavras exatas como também procura den
 grep -wi um sobre_ariana.txt
 
 Um ser humano encantador.
+```
+- Usando o sinal pipe (|) com grep
+
+Como o pipe, podemos filtrar a saída de qualquer comando.
+
+Verificar se um pacote está instalado:
+```
+rpm -qa | grep gnome-terminal
+```
+Verificar quais processos estão em execução no seu sistema como usuário `user001`
+```
+ps -ef | grep user001
 ```
 ## Referências
 https://www.digitalocean.com/community/tutorials/grep-command-in-linux-unix

@@ -104,3 +104,7 @@ https://www.tecmint.com/add-users-in-linux/
 https://linuxize.com/post/how-to-create-users-in-linux-using-the-useradd-command/
 
 https://www.linux.org/threads/adding-a-user-from-the-command-line.54704/
+
+adduser vs useradd
+
+https://discussion.fedoraproject.org/t/when-to-use-adduser-vs-useradd/115919

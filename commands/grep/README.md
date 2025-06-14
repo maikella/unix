@@ -85,6 +85,30 @@ Verificar quais processos estão em execução no seu sistema como usuário `use
 ```
 ps -ef | grep user001
 ```
+## Exibir apenas um número de linhas específico antes/depois do padrão 
+Você pode usar os argumentos `-A` (After) para depois ou `-B` (Before) para antes, para exibir o número de linhas que sucedem (que vem depois) ou precedem (que vem antes) do padrão.
+```
+ifconfig | grep -A 2 enp
+enp2s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.19  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fd00::eeec:341d:5c5d:c6ba  prefixlen 64  scopeid 0x0<global>
+```
+Lilhas que precedem o padrão
+```
+ifconfig | grep -B 3 -w lo
+        TX packets 57128  bytes 9591582 (9.1 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+```
+Observe que o espaço também foi contado.
+## Usando espressões regulares (REGEX) com grep
+REGular EXpression é uma sequência de caracteres usada para corresponder a um padrão.
+
+- Procurar caracteres no início da linha `^`
+- Procurar caracteres no final da linha `$`
+- Procurar qualquer caracter `.`
+- Procurar qualquer caracter entre A e Z `[a-z]`
 ## Referências
 https://www.digitalocean.com/community/tutorials/grep-command-in-linux-unix
 
@@ -92,11 +116,13 @@ https://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/
 
 https://superuser.com/questions/600975/how-to-use-grep-to-search-for-regular-expressions-themselves-without-parsing-th
 
-https://linuxize.com/post/regular-expressions-in-grep/
-
-
 https://linuxize.com/post/how-to-use-grep-command-to-search-files-in-linux/
 
 https://www.ibm.com/docs/en/aix/7.3.0?topic=g-grep-command
 
 https://www.geeksforgeeks.org/grep-command-in-unixlinux/
+
+
+expressões regulares
+
+https://linuxize.com/post/regular-expressions-in-grep/

@@ -28,6 +28,28 @@ Guia FreeBSD
 
 https://www.ocf.berkeley.edu/~reinholz/freebsd/freebsd.html
 
+https://www.reddit.com/r/freebsd/comments/uug0d9/beginners_guide_to_freebsd_how_to_install_freebsd/
+
+https://www.digitalocean.com/community/tutorials/how-to-get-started-with-freebsd
+
+https://www.digitalocean.com/community/tutorial-series/getting-started-with-freebsd
+
+https://www.reddit.com/r/freebsd/comments/1hr781r/im_a_freebsd_noob_how_can_i_get_started/
+
+https://old.reddit.com/r/freebsd/comments/1gsy1c8/deleted_by_user/lxivhlk/
+
+https://freebsdfoundation.org/resource/installing-a-desktop-environment-on-freebsd/
+
+https://www.techrepublic.com/article/how-to-install-gnome-on-freebsd/
+
+https://ostechnix.com/install-freebsd/
+
+https://eerielinux.wordpress.com/2015/07/18/installing-freebsd-a-tutorial-from-the-linux-users-perspective/
+
+Pesquisar distribuições
+
+https://distrowatch.com/search-mobile.php?pkg=shim&relation=lessequal&pkgver=1&distrorange=InAny
+
 O que são `Jails`?
 
 https://www.cultdeadsheep.org/freebsd-jails-tutorial/
@@ -84,4 +106,66 @@ Sobre segurança dos BSD's
 
 https://discuss.privacyguides.net/t/other-secure-operating-systems/18332
 
+Guia sistemas de arquivos
 
+https://www.ufsexplorer.com/articles/bsd-solaris-unix-file-systems/
+
+Portas disponíveis
+
+https://ports.freebsd.org/cgi/ports.cgi?query=java&stype=all&sektion=all
+
+Gerenciar usuário no freebsd
+
+https://www.bosontreinamentos.com.br/bsd/como-gerenciar-usuarios-no-freebsd/
+
+Configuração freebsd
+
+https://tvn.roars.dev/posts/freebsd.html
+
+https://vez.mrsk.me/freebsd-defaults
+
+Dicas para não fazer
+
+https://www.reddit.com/r/freebsd/comments/1hrbnk0/lesson_learned_dont_switch_to_pkgbase_in_sudo/
+
+Servidor freebsd
+
+https://www.reddit.com/r/freebsd/comments/1hu6px0/freebsd_installation_and_drive_partitioning_help/
+
+Script freebsd
+
+https://www.reddit.com/r/freebsd/comments/1hub8zb/a_freebsd_setup_script/
+
+Freebsd redes
+
+https://www.reddit.com/r/freebsd/comments/1i3ydjm/freebsd_is_better_for_network/
+
+Entender melhor sobre bsd's
+
+https://www.reddit.com/r/freebsd/comments/1atpfev/deleted_by_user/
+
+Desafios ao configurar o freebsd
+
+https://www.quora.com/How-difficult-is-it-to-install-and-configure-FreeBSD
+
+Aprender mais sobre o freebsd
+
+https://www.freebsd.org/projects/newbies/
+
+Mais informações sobre freebsd
+
+https://www.youtube.com/watch?app=desktop&v=LEHiQJjzKus
+
+https://www.storcenter.com.br/post/o-que-e-freebsd
+
+https://arstechnica.com/gadgets/2020/04/not-actually-linux-distro-review-freebsd-12-1-release/
+
+https://www.reddit.com/r/freebsd/comments/1hxkko4/switching_to_freebsd/
+
+https://www.reddit.com/r/freebsd/comments/1hzsqug/podman_and_systemd/
+
+https://www.reddit.com/r/freebsd/comments/1i8avvp/is_freebsd_good_to_be_used_as_a_development/
+
+https://www.zenarmor.com/docs/linux-tutorials/freebsd
+
+https://linuxuniverse.com.br/bsd/freebsd

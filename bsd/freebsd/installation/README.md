@@ -26,3 +26,8 @@ O que são `Jails`?
 
 https://www.cultdeadsheep.org/freebsd-jails-tutorial/
 
+Playlists
+
+https://www.youtube.com/playlist?list=PLCHxQu_V7ZimLYSSWj_7PGN8MgaBcQrW7
+
+https://www.youtube.com/playlist?app=desktop&list=PLbBPNfi_li9uOrxMKIw-5W0vxyyVLTXXo

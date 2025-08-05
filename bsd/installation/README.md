@@ -21,3 +21,8 @@ https://www.fosslife.org/beginners-guide-freebsd
 Guia FreeBSD
 
 https://www.ocf.berkeley.edu/~reinholz/freebsd/freebsd.html
+
+O que são `Jails`?
+
+https://www.cultdeadsheep.org/freebsd-jails-tutorial/
+
